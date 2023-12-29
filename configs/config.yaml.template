@@ -1,0 +1,19 @@
+###################### path config ######################
+train_dir: "path of train HR images (str)"
+valid_dir: "path of valid HR images (str)"
+log_dir: "path to log graphs of training (str)"
+result_path: "path to save generated images (str)"
+
+############### data preprocessing config ###############
+patch_size: "image patch size (tuple(int, int))"
+ratio: "ratio of making lr images. (if 2, then lr image will be half size of hr images) (int)"
+
+##################### model config ######################
+D: "number of RDB (int)"
+C: "number of convolution layer in RDB (int)"
+G: "number of filter in intermediate conv layers in RDB (int)"
+
+#################### training config #####################
+batch_size: "batch size (int)"
+lr: "learning rate (float)"
+epochs: "training epochs (int)"

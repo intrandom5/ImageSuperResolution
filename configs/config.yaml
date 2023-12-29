@@ -1,0 +1,20 @@
+###################### path config ######################
+train_dir: "div2k/DIV2K_train_HR"
+valid_dir: "div2k/DIV2K_valid_HR"
+log_dir: "./logs/RDN"
+result_path: "./results"
+model_path: "./results/models"
+
+############### data preprocessing config ###############
+patch_size: (32, 32)
+ratio: 2
+
+##################### model config ######################
+D: 20
+C: 6
+G: 32
+
+#################### training config #####################
+batch_size: 16
+lr: 0.001
+epochs: 200
