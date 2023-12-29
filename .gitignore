@@ -1,0 +1,5 @@
+*.ipynb
+__pycache__
+div2k
+logs
+results
