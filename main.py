@@ -99,7 +99,7 @@ def main(config):
                 save_img(pred_img*255, os.path.join(save_path, f"pred_{i}.png"))
             writer.add_scalar("dev loss", eval_loss/len(valid_dataset), epoch)
             writer.add_scalar("dev psnr", eval_psnr/len(valid_dataset), epoch)
-            path = os.path.join(config["model_path"], f"epochs{epoch}")
+            path = os.path.join(config["model_path"], f"epochs{epoch}.pt")
             torch.save(model.state_dict(), path)
 
 if __name__ == "__main__":
