@@ -69,7 +69,7 @@ def aug_img(img):
     return img
 
 def save_img(img, name):
-    img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
+    img = cv2.cvtColor(img, cv2.COLOR_RGB2BGR)
     cv2.imwrite(name, img)
 
 def psnr_metrics(original, contrast):
