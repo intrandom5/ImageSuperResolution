@@ -32,7 +32,7 @@ class SuperResolutionDataset:
             hr = aug_img(hr)
         lr = degradation(hr, self.ratio)
         
-        orig_w, orig_h = lr.shape[:2]
+        orig_w, orig_h = hr.shape[:2]
         w, h = self.patch_size
         
         hr_patches = self.preprocess_img(hr, int(w*self.ratio), int(h*self.ratio))
