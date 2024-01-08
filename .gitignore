@@ -4,3 +4,4 @@ div2k
 logs
 results
 preds
+configs/*.yaml
