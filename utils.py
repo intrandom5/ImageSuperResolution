@@ -9,6 +9,10 @@ def load_img(file):
     img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
     return img
 
+def save_img(img, name):
+    img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
+    cv2.imwrite(name, img)
+
 def degradation(hr, ratio):
     lr = cv2.resize(hr, (hr.shape[1]//ratio, hr.shape[0]//ratio), cv2.INTER_CUBIC)
     return lr
@@ -67,10 +71,6 @@ def aug_img(img):
         img = cv2.flip(img, 1)
     
     return img
-
-def save_img(img, name):
-    img = cv2.cvtColor(img, cv2.COLOR_RGB2BGR)
-    cv2.imwrite(name, img)
 
 def psnr_metrics(original, contrast):
     '''
