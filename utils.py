@@ -2,6 +2,7 @@ import cv2
 import math
 import random
 import numpy as np
+from PIL import Image
 
 
 def load_img(file):
@@ -10,8 +11,8 @@ def load_img(file):
     return img
 
 def save_img(img, name):
-    img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
-    cv2.imwrite(name, img)
+    img = Image.fromarray(np.uint8(img))
+    img.save(name)
 
 def degradation(hr, ratio):
     lr = cv2.resize(hr, (hr.shape[1]//ratio, hr.shape[0]//ratio), cv2.INTER_CUBIC)
