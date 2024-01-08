@@ -1,0 +1,13 @@
+###################### path config ######################
+model_path: results/models/epochs60.pt # path of saved model state in .pt
+save_path: preds # path to save SR result images.
+img_path: div2k/DIV2K_valid_LR_X2 # path of target images.
+
+############### data preprocessing config ###############
+patch_size: (32, 32) # patch size to crop images.
+ratio: 2 # ratio of SR
+
+##################### model config ######################
+D: 20 # "number of RDB (int)"
+C: 6 # "number of convolution layer in RDB (int)"
+G: 32 # "number of filter in intermediate conv layers in RDB (int)"
